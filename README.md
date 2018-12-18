@@ -1,7 +1,8 @@
 # slabelDNN
 "Improving Brain Sulcal Curve Labeling in Large Scale Cross-Sectional MRI using Deep Neural Networks"
 
-Features used in the network include parcel labels, mean curvature, distance measure, spectral features as illustrated below
+Features used in the network include parcel labels, mean curvature, distance measure, spectral features 
+as illustrated below for left hemisphere
 
 <img src="https://github.com/MASILab/slabelDNN/blob/master/features_example.png" width="600px"/>
 
