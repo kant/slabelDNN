@@ -3,6 +3,11 @@
 
 Features used in the network include parcel labels, mean curvature, distance measure, spectral features as illustrated below
 
+<img src="https://github.com/MASILab/slabelDNN/blob/master/features_example.png" width="600px"/>
+
+Output sulcal curves are generated as slabel files in Results folder and vtk files with labels for each subject on left and right hemisphere are saved in /OUTPUTS folder
+
+<img src="https://github.com/MASILab/slabelDNN/blob/master/outputs_example.png" width="600px"/>
 
 ## Detailed envrioment setting  
 
