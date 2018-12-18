@@ -23,14 +23,33 @@ export input_dir=/home/input_dir
 # make that directory
 sudo mkdir $input_dir
 # Test data 
+Data: 
+***
+File structure:
+* INPUTS
+     - subjects.txt
+     - subj1/
+     - subj2/
+     - subjn/
 
+Each subject folder should have following files (Eg: for subj1)
+* subj1
+    - lh.target_image_GMimg_centralSurf.vtk
+    - rh.target_image_GMimg_centralSurf.vtk
+    - lh.target_image_GMimg_centralSurf.sphere.vtk
+    - rh.target_image_GMimg_centralSurf.sphere.vtk
+    - lh.target_image_GMimg_centralSurf.scurve
+    - rh.target_image_GMimg_centralSurf.scurve
+    - lh_parcel.txt
+    - rh_parcel.txt
+***
 # set output directory
 export output_dir=$input_dir/output
 #run the docker
 sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_sulcalcurve_v1_0_0 /extra/run_sulcaldnn.sh
 
 Output sulcal curves are generated as slabel files in Results folder and vtk files with labels for each subject on left and right hemisphere are saved in /OUTPUTS folder
-
+```
 ## Detailed envrioment setting  
 
 #### Testing platform
@@ -39,7 +58,7 @@ Output sulcal curves are generated as slabel files in Results folder and vtk fil
 - tensorflow 1.4.1
 - Docker version 1.13.1-cs9
 - Nvidia-docker version 1.0.1 to 2.0.3
-
+```
 
 #### install Docker
 ```
