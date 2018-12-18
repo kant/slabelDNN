@@ -6,9 +6,30 @@ as illustrated below for left hemisphere
 
 <img src="https://github.com/MASILab/slabelDNN/blob/master/features_example.png" width="600px"/>
 
-Output sulcal curves are generated as slabel files in Results folder and vtk files with labels for each subject on left and right hemisphere are saved in /OUTPUTS folder
+Output sulcal curves generated for each subject on left and right hemisphere
 
 <img src="https://github.com/MASILab/slabelDNN/blob/master/outputs_example.png" width="600px"/>
+
+## Quick Start
+#### Get our docker image
+```
+sudo docker pull vuiiscci/sulcaldnn:deep_sulcalcurve_v1_0_0
+```
+#### Run Sulcal curve prediction
+You can run the following command or change the "input_dir", then you will have the final segmentation results in output_dir
+```
+# you need to specify the input directory
+export input_dir=/home/input_dir   
+# make that directory
+sudo mkdir $input_dir
+# Test data 
+
+# set output directory
+export output_dir=$input_dir/output
+#run the docker
+sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS masidocker/spiders:deep_sulcalcurve_v1_0_0 /extra/run_sulcaldnn.sh
+
+Output sulcal curves are generated as slabel files in Results folder and vtk files with labels for each subject on left and right hemisphere are saved in /OUTPUTS folder
 
 ## Detailed envrioment setting  
 
