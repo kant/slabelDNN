@@ -50,9 +50,10 @@ sudo nvidia-docker run -it --rm -v $input_dir:/INPUTS/ -v $output_dir:/OUTPUTS m
 
 Output sulcal curves are generated as slabel files in Results folder and vtk files with labels for each subject on left and right hemisphere are saved in /OUTPUTS folder
 ```
-## Detailed envrioment setting  
+## Detailed environment setting  
 
 #### Testing platform
+```
 - Ubuntu 16.04
 - cuda 8.0
 - tensorflow 1.4.1
